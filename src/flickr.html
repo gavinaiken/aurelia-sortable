@@ -1,0 +1,16 @@
+<template>
+  <section ref="scroll" style="position:relative;height:100%;overflow:auto;">
+      <h2>${heading}</h2>
+      <div class="row"
+           sortable="scroll.bind: scroll; items.bind: images; placeholder.bind: { media: { m: '//:0', placeholderClass: 'placeholder' }}; moved.call:moved();">
+        <div style="width: 100%; height: 1000px;">
+          <div class="col-sm-6 col-md-3 flickr-img ${image.media.placeholderClass}" repeat.for="image of images"
+               sortable-item="item.bind: image;">
+            <a class="thumbnail">
+              <img src.bind="image.media.m" draggable="false"/>
+            </a>
+          </div>
+        </div>
+      </div>
+  </section>
+</template>
