@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .splash {
@@ -33,7 +36,9 @@ body {
 }
 
 section {
-    margin: 0 20px;
+  margin: 0 20px;
+  height: 100%;
+  overflow: auto;
 }
 
 .navbar-nav li.loader {
@@ -122,4 +127,28 @@ div.au-stagger {
 
 .placeholder {
   visibility: hidden;
+}
+
+.list {
+  width: 260px;
+  height: 100%;
+  overflow: auto;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.list li {
+  padding: 2px;
+}
+
+.list table {
+  table-layout: fixed;
+}
+
+.list td:nth-child(1) {
+  font-size: 13px;
+}
+.list td:nth-child(2) {
+  font-size: 20px;
+  text-align: center;
 }
